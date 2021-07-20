@@ -1,0 +1,30 @@
+.shlop {
+  font-family: Shlop;
+}
+
+.background-banner {
+  background: url("~@/assets/background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  color: #82bf45;
+}
+
+.subtitle {
+  color: ghostwhite;
+}
+
+@media screen and (min-width: 1400px) {
+  .background-banner {
+    background: url("~@/assets/background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .subtitle {
+    color: #17a3ac;
+  }
+}
