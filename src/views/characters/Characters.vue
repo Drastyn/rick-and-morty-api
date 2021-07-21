@@ -9,16 +9,39 @@
         <Card :character="character" />
       </div>
     </div>
+    <div class="my-4 mx-5">
+      <nav class="pagination" role="navigation" aria-label="pagination">
+        <Button
+          v-if="characters.info && characters.info.prev"
+          :buttonClass="'pagination-previous nav-button page-button pointer'"
+          :text="'Previous Page'"
+          @click.native="goToPage(characters.info.prev)"
+        />
+        <Button
+          v-if="characters.info && characters.info.next"
+          :buttonClass="'pagination-previous nav-button page-button pointer'"
+          :text="'Next Page'"
+          @click.native="goToPage(characters.info.next)"
+        />
+      </nav>
+    </div>
   </main>
 </template>
 
 <script>
 import { mapState } from "vuex";
 import Card from "@/components/Card";
+import Button from "@/components/Button";
 export default {
   name: "characters",
+  data() {
+    return {
+      page: 1,
+    };
+  },
   components: {
     Card,
+    Button,
   },
   computed: {
     ...mapState("characters", ["characters"]),
@@ -28,7 +51,13 @@ export default {
   },
   methods: {
     requestCharacters() {
-      this.$store.dispatch("characters/getCharacters");
+      this.$store.dispatch("characters/getCharacters", {
+        page: this.page,
+      });
+    },
+    goToPage(page) {
+      this.page = page.split("=").pop();
+      this.requestCharacters();
     },
   },
 };

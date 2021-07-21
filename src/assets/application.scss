@@ -2,6 +2,10 @@
   font-family: Shlop;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .background-banner {
   background: url("~@/assets/background-mobile.jpg");
   background-repeat: no-repeat;
@@ -19,6 +23,16 @@
 
 .text {
   color: #140aad;
+}
+
+.page-button {
+  background: #00d1b2;
+}
+
+.nav-button,
+.nav-button:hover {
+  border: none;
+  color: white;
 }
 
 @media screen and (min-width: 1400px) {

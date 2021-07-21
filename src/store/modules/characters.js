@@ -11,9 +11,9 @@ const characters = {
     },
   },
   actions: {
-    getCharacters({ commit }) {
+    getCharacters({ commit }, params) {
       return new Promise((resolve, reject) => {
-        CharacterService.getCharacters()
+        CharacterService.getCharacters(params)
           .then((response) => {
             commit("setCharacters", response);
             resolve();

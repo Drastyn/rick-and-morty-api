@@ -5,10 +5,10 @@ const instance = axios.create({
 });
 
 export default {
-  getCharacters() {
+  getCharacters(params) {
     return instance
-      .get("character")
-      .then((response) => (response.data))
+      .get(`character?page=${params.page}`)
+      .then((response) => response.data)
       .catch((error) => console.log(error));
   },
 };
