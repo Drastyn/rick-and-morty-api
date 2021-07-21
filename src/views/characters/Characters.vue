@@ -56,6 +56,7 @@ export default {
       });
     },
     goToPage(page) {
+      window.scrollTo(0, 0);
       this.page = page.split("=").pop();
       this.requestCharacters();
     },
