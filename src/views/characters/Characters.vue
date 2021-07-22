@@ -8,18 +8,19 @@
       >
         <Card :character="character" />
       </div>
+      <Modal />
     </div>
     <div class="my-4 mx-5">
       <nav class="pagination" role="navigation" aria-label="pagination">
         <Button
           v-if="characters.info && characters.info.prev"
-          :buttonClass="'pagination-previous nav-button page-button pointer'"
+          :buttonClass="'pagination-previous nav-button page-button pointer shlop'"
           :text="'Previous Page'"
           @click.native="goToPage(characters.info.prev)"
         />
         <Button
           v-if="characters.info && characters.info.next"
-          :buttonClass="'pagination-previous nav-button page-button pointer'"
+          :buttonClass="'pagination-previous nav-button page-button pointer shlop'"
           :text="'Next Page'"
           @click.native="goToPage(characters.info.next)"
         />
@@ -31,6 +32,7 @@
 <script>
 import { mapState } from "vuex";
 import Card from "@/components/Card";
+import Modal from "@/components/Modal";
 import Button from "@/components/Button";
 export default {
   name: "characters",
@@ -41,6 +43,7 @@ export default {
   },
   components: {
     Card,
+    Modal,
     Button,
   },
   computed: {

@@ -39,6 +39,31 @@ html {
   color: white;
 }
 
+.modal {
+  display: flex;
+  justify-content: center;
+  animation: animation_open 1s;
+}
+
+@keyframes animation_open {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+
+  &-image {
+    border-radius: 0.25rem;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .background-banner {
     background: url("~@/assets/background-desktop.jpg");
