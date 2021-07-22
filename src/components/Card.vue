@@ -6,15 +6,11 @@
       </figure>
       <div class="card-content">
         <div class="media-content">
-          <p class="title is-4 shlop">{{ character.name }}</p>
+          <p class="title is-3 shlop has-text-centered">{{ character.name }}</p>
           <div class="content is-flex-direction-column">
-            <p class="text is-size-6 shlop m-0">
-              Specie: {{ character.species }}
-            </p>
-            <p class="text is-size-6 shlop m-0">
-              Status: {{ character.status }}
-            </p>
-            <p class="text is-size-6 shlop m-0">
+            <p class="text shlop m-2 info">Specie: {{ character.species }}</p>
+            <p class="text shlop m-2 info">Status: {{ character.status }}</p>
+            <p class="text shlop m-2 info">
               Origin: {{ character.origin.name }}
             </p>
           </div>
