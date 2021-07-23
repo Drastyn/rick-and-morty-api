@@ -1,6 +1,7 @@
 <template>
   <main id="characters">
     <Navigation
+      :class="'navigation-fix'"
       :charactersInfo="characters.info"
       :page="page"
       :updatePage="updatePage"
@@ -20,6 +21,11 @@
       :page="page"
       :updatePage="updatePage"
     />
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <Credits />
+      </div>
+    </footer>
   </main>
 </template>
 
@@ -28,6 +34,7 @@ import { mapState } from "vuex";
 import Card from "@/components/Card";
 import Modal from "@/components/Modal";
 import Navigation from "@/components/Navigation";
+import Credits from "@/components/Credits.vue";
 export default {
   name: "characters",
   data() {
@@ -40,6 +47,7 @@ export default {
     Card,
     Modal,
     Navigation,
+    Credits,
   },
   computed: {
     ...mapState("characters", ["characters"]),
@@ -60,9 +68,15 @@ export default {
       this.updateActivePage();
     },
     updateActivePage() {
+      this.removePreviousActivePageStyle();
+      this.addActivePageStyle();
+    },
+    removePreviousActivePageStyle() {
       document
         .getElementsByName(`page-button-${this.previousActivePage}`)
         .forEach((elemenet) => elemenet.classList.remove("active-page"));
+    },
+    addActivePageStyle() {
       document
         .getElementsByName(`page-button-${this.page}`)
         .forEach((elemenet) => elemenet.classList.add("active-page"));

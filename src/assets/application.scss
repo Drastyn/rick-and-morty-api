@@ -17,7 +17,8 @@ html {
   background-position: center;
 }
 
-.title, .active-page {
+.title,
+.active-page {
   color: #82bf45 !important;
 }
 
@@ -25,12 +26,12 @@ html {
   color: ghostwhite;
 }
 
-.text {
-  color: #140aad;
+.navigation-fix {
+  display: none;
 }
 
-.card {
-  background-color: #1F2937
+.card, .footer {
+  background-color: #1f2937;
 }
 
 .info {
@@ -43,6 +44,7 @@ html {
 }
 
 .page-button {
+  font-size: 1.3em;
   background: #364150;
 }
 
@@ -50,6 +52,16 @@ html {
 .nav-button:hover {
   border: none;
   color: white;
+}
+
+.credits {
+  &-link {
+    color: white;
+    transition: 0.8s;
+  }
+  &-link:hover {
+    color: cyan !important;
+  }
 }
 
 .modal {
@@ -77,5 +89,8 @@ html {
   }
   .subtitle {
     color: #17a3ac;
+  }
+  .navigation-fix {
+    display: block;
   }
 }

@@ -8,9 +8,9 @@
         <div class="media-content">
           <p class="title is-3 shlop has-text-centered">{{ character.name }}</p>
           <div class="content is-flex-direction-column">
-            <p class="text shlop m-2 info">Specie: {{ character.species }}</p>
-            <p class="text shlop m-2 info">Status: {{ character.status }}</p>
-            <p class="text shlop m-2 info">
+            <p class="shlop m-2 info">Specie: {{ character.species }}</p>
+            <p class="shlop m-2 info">Status: {{ character.status }}</p>
+            <p class="shlop m-2 info">
               Origin: {{ character.origin.name }}
             </p>
           </div>
