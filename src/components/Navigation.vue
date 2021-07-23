@@ -8,13 +8,13 @@
       <Button
         v-if="charactersInfo && charactersInfo.prev"
         :class="'pagination-previous nav-button page-button pointer shlop'"
-        :text="'Previous Page'"
+        :leftIcon="'fas fa-arrow-left mr-1'"
         @click.native="goToPage(charactersInfo.prev)"
       />
       <Button
         v-if="charactersInfo && charactersInfo.next"
         :class="'pagination-next nav-button page-button pointer shlop'"
-        :text="'Next Page'"
+        :rightIcon="'fas fa-arrow-right ml-1'"
         @click.native="goToPage(charactersInfo.next)"
       />
       <ul class="pagination-list" v-if="charactersInfo && charactersInfo.pages">
