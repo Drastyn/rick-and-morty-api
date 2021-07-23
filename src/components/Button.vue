@@ -1,5 +1,5 @@
 <template>
-  <button id="my-button" :class="buttonClass">
+  <button id="my-button">
     <span>
       {{ text }}
     </span>
