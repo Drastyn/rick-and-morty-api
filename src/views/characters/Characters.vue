@@ -1,5 +1,10 @@
 <template>
   <main id="characters">
+    <Navigation
+      :charactersInfo="characters.info"
+      :page="page"
+      :updatePage="updatePage"
+    />
     <div class="columns is-multiline my-4 mx-4">
       <div
         class="column is-one-quarter-desktop is-half-tablet"
@@ -56,11 +61,11 @@ export default {
     },
     updateActivePage() {
       document
-        .getElementById(`page-button-${this.previousActivePage}`)
-        .classList.remove("active-page");
+        .getElementsByName(`page-button-${this.previousActivePage}`)
+        .forEach((elemenet) => elemenet.classList.remove("active-page"));
       document
-        .getElementById(`page-button-${this.page}`)
-        .classList.add("active-page");
+        .getElementsByName(`page-button-${this.page}`)
+        .forEach((elemenet) => elemenet.classList.add("active-page"));
     },
   },
 };

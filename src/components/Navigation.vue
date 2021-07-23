@@ -20,7 +20,7 @@
       <ul class="pagination-list" v-if="charactersInfo && charactersInfo.pages">
         <li v-for="(buttonPage, index) in charactersInfo.pages" :key="index">
           <Button
-            :id="setPageButtonId(buttonPage)"
+            :name="setPageButtonName(buttonPage)"
             v-if="
               page === buttonPage
                 ? (buttonClass =
@@ -47,7 +47,7 @@ export default {
     Button,
   },
   methods: {
-    setPageButtonId(buttonPage) {
+    setPageButtonName(buttonPage) {
       return `page-button-${buttonPage}`;
     },
     goToPage(page) {
