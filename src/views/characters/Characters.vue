@@ -1,6 +1,7 @@
 <template>
   <main id="characters">
     <Navigation
+      :idComponent="'navigation-top'"
       :class="'navigation-fix'"
       :charactersInfo="characters.info"
       :page="page"
@@ -17,6 +18,7 @@
       <Modal />
     </div>
     <Navigation
+      :idComponent="'navigation-bot'"
       :charactersInfo="characters.info"
       :page="page"
       :updatePage="updatePage"

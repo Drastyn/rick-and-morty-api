@@ -1,5 +1,5 @@
 <template>
-  <div id="navigation" class="my-4 mx-5">
+  <div :id="idComponent" class="my-4 mx-5">
     <nav
       class="pagination is-centered"
       role="navigation"
@@ -42,7 +42,7 @@
 import Button from "./Button.vue";
 export default {
   name: "navigation",
-  props: ["charactersInfo", "page", "updatePage"],
+  props: ["idComponent", "charactersInfo", "page", "updatePage"],
   components: {
     Button,
   },
@@ -55,6 +55,7 @@ export default {
       this.updatePage(page.split("=").pop());
     },
     goToSelectedPage(page) {
+      if (this.page === page) return;
       window.scrollTo(0, 0);
       this.updatePage(page);
     },
