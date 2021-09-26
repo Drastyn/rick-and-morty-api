@@ -6,8 +6,8 @@ const characters = {
     characters: [],
   },
   mutations: {
-    setCharacters(state, characters) {
-      state.characters = characters;
+    setCharacters(state, setCharacters) {
+      state.characters = setCharacters;
     },
   },
   actions: {

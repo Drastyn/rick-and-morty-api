@@ -1,13 +1,13 @@
 <template>
   <button id="my-button">
     <span class="icon" v-if="leftIcon">
-      <i :class="leftIcon"></i>
+      <em :class="leftIcon"></em>
     </span>
     <span>
       {{ text }}
     </span>
     <span class="icon" v-if="rightIcon">
-      <i :class="rightIcon"></i>
+      <em :class="rightIcon"></em>
     </span>
   </button>
 </template>
@@ -18,5 +18,3 @@ export default {
   props: ["buttonClass", "text", "leftIcon", "rightIcon"],
 };
 </script>
-
-<style></style>

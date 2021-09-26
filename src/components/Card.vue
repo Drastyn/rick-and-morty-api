@@ -10,9 +10,7 @@
           <div class="content is-flex-direction-column">
             <p class="shlop m-2 info">Specie: {{ character.species }}</p>
             <p class="shlop m-2 info">Status: {{ character.status }}</p>
-            <p class="shlop m-2 info">
-              Origin: {{ character.origin.name }}
-            </p>
+            <p class="shlop m-2 info">Origin: {{ character.origin.name }}</p>
           </div>
         </div>
       </div>
@@ -43,7 +41,7 @@ export default {
       this.modalImage = document.getElementById("modal-image");
     },
     closeModal() {
-      window.addEventListener("click", (event) => {
+      document.addEventListener("click", (event) => {
         if (this.modalIsOpen && event.target === this.modalBackground) {
           this.modalIsOpen = false;
           this.disableModalStyles();
@@ -69,5 +67,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
