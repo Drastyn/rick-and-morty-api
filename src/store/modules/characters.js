@@ -1,4 +1,4 @@
-import CharacterService from "@/services/character-service";
+import CharacterService from "@/services/character-service"
 
 const characters = {
   namespaced: true,
@@ -7,7 +7,7 @@ const characters = {
   },
   mutations: {
     setCharacters(state, setCharacters) {
-      state.characters = setCharacters;
+      state.characters = setCharacters
     },
   },
   actions: {
@@ -15,13 +15,13 @@ const characters = {
       return new Promise((resolve, reject) => {
         CharacterService.getCharacters(params)
           .then((response) => {
-            commit("setCharacters", response);
-            resolve();
+            commit("setCharacters", response)
+            resolve()
           })
-          .catch((error) => reject(error));
-      });
+          .catch((error) => reject(error))
+      })
     },
   },
-};
+}
 
-export default characters;
+export default characters
