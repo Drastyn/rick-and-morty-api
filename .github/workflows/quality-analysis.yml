@@ -2,7 +2,7 @@ name: "Quality Analysis"
 
 on:
   push: 
-   # branches-ignore: ["main", "test*"]
+   branches-ignore: ["main", "test*"]
 
 jobs:
   source-code-analysis:
