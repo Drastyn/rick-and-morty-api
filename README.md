@@ -4,7 +4,7 @@ Practice with Rick and Morty API (https://rickandmortyapi.com/)
 Using VueJS, Bulma css and Axios
 ```
 
-## Project setup
+## Project setup 
 ```
 npm install 
 ```
