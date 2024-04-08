@@ -1,4 +1,4 @@
-# rick-morty
+# rick-morty-api
 ```
 Practice with Rick and Morty API (https://rickandmortyapi.com/)
 Using VueJS, Bulma css and Axios
