@@ -4,8 +4,10 @@ on:
   workflow_dispatch
 
 jobs:
-  source-code-analysis:
-    name: "Analysis"
+  Analysis:
     uses: Drastyn/actions/.github/workflows/source-code-analysis.yml@main
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  Build:
+    uses: Drastyn/actions/.github/workflows/build-js.yml@main
+
