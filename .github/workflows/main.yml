@@ -5,6 +5,7 @@ on:
 
 jobs:
   source-code-analysis:
+    name: "Analysis"
     uses: Drastyn/actions/.github/workflows/source-code-analysis.yml@main
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
