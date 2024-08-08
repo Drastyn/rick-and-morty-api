@@ -2,7 +2,7 @@
   <article id="card" class="card">
     <div class="card-image">
       <figure class="image is-3by2 pointer" @click="openModal(character.image)">
-        <img :src="character.image" alt="character-image" />
+        <img :src="character.image" alt="character" />
       </figure>
       <div class="card-content">
         <div class="media-content">
